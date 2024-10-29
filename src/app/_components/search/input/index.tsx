@@ -15,7 +15,7 @@ export default function SearchInput() {
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
     const query = e.target.value
-    if (query) {
+    if (query.trim() !== '') {
       setQuery(query)
       router.push(`/search?query=${query}`)
     } else {

@@ -105,7 +105,10 @@ export default function ProductsContextProvider({
     setOffset(0)
   }, [query])
   useEffect(() => {
-    revalidateUrl()
+    if (categories.length > 0 || brands.length > 0) {
+      revalidateUrl()
+      return
+    }
   }, [categories, brands])
 
   return (
