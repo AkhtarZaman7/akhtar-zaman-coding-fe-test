@@ -1,6 +1,4 @@
 'use client'
-
-import { useSearchParams } from 'next/navigation'
 import Checkbox from '@components/checkbox'
 import Button from '../button'
 import { useState } from 'react'
@@ -12,8 +10,6 @@ export default function Filters({
   names: string[]
   title?: string
 }) {
-  const params = useSearchParams()
-  const searchQuery = params.get('query')
   const [limit, setLimit] = useState<number>(6)
   if (!names || names.length === 0) return null
 

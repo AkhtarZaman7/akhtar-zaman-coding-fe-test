@@ -16,13 +16,12 @@ export default function SearchResults({ searchValue }: SearchResultsType) {
     })) || []
 
   const brandsData: SearchResultCardType[] =
-    products?.products?.merchants?.map(
-      (merchant) =>
-        ({
-          title: merchant.shopName,
-          image: merchant.profileImage,
-        }) || []
-    ) || []
+    products?.products?.merchants?.map((merchant) => {
+      return {
+        title: merchant.shopName,
+        image: merchant.profileImage,
+      }
+    }) || []
   const sellersData: SearchResultCardType[] =
     products?.products?.users?.map((user) => ({
       title: `${user.firstName} ${user.lastName}`,
