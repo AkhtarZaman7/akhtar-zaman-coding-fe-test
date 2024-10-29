@@ -1,0 +1,16 @@
+.search-page {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  .search-filters {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .search-content {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    gap: 20px;
+  }
+}
