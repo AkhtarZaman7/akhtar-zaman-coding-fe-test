@@ -17,7 +17,7 @@ export default function BreadCrumb() {
               index === routes.length - 1 ? 'active' : 'inactive'
             }`}
           >
-            {route} {index === routes.length - 1 ? '' : ' / '}
+            {`${route} ${index === routes.length - 1 ? '' : ' /'}`}
           </span>
         )
       })}

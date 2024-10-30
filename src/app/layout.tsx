@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 
 import '@styles/main.scss'
+import 'react-multi-carousel/lib/styles.css'
+
 import Header from '@components/header'
 import Footer from '@components/footer'
 import BreadCrumb from '@components/bread-crum'

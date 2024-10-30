@@ -29,5 +29,9 @@ export async function fetchSearchData(
     cache: 'no-cache',
   })
 
-  return await apiResponse.json()
+  const data = await apiResponse.json()
+  if (!apiResponse.ok) {
+    throw new Error(data.error)
+  }
+  return data
 }

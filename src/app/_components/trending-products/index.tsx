@@ -1,12 +1,15 @@
+'use client'
 import React from 'react'
 import product from './products.json'
 import ProductCard from '../cards/product'
+import Carousel from '../carousel'
 
 export default function TrendingProducts() {
   return (
     <div className="trending-products-container">
       <p className="title">TRENDING PRODUCTS</p>
-      <div className="products">
+      <div className="products"></div>
+      <Carousel>
         {product.map((product) => {
           if (!product.locales[0]?.variants?.[0]?.price) return null
           return (
@@ -26,7 +29,7 @@ export default function TrendingProducts() {
             />
           )
         })}
-      </div>
+      </Carousel>
     </div>
   )
 }

@@ -55,4 +55,39 @@
       }
     }
   }
+  .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 80%;
+    margin: 26px auto 0; 
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+    .menu-item {
+      @include font(
+        $font-size-base,
+        $font-weight-normal,
+        $line-height-base,
+        $letter-spacing-wide,
+        $color-white,
+        none,
+        $font-family-primary
+      );
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 50px;
+      transition : background-color 0.5s ease;
+      &:hover {
+        background-color: $color-active-bg;
+      }
+      .menu-dropdown {
+        margin-left: 5px;
+        margin-top: 10px;
+      }
+    }
+  }
 }

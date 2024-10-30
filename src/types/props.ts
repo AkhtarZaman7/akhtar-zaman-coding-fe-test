@@ -5,9 +5,7 @@ interface HeroSellerType {
   overlay: StaticImageData
 }
 
-export type { HeroSellerType }
-
-export type ProductCardType = {
+interface ProductCardType {
   product: {
     brandImage: string
     brandName: string
@@ -26,37 +24,56 @@ export type ProductCardType = {
   }
 }
 
-export type ButtonType = {
+interface ButtonType {
   type?: 'primary' | 'bordered'
 }
 
-export type SellerCardType = {
+interface SellerCardType {
   name: string
   avatar?: string
 }
 
-export type BrandCardType = {
+interface BrandCardType {
   name: string
   image?: string
   isDeliverSameDay?: boolean
 }
 
-export type SearchResultsType = {
+interface SearchResultsType {
   searchValue: string
 }
 
-export type SearchResultCardType = {
+interface SearchResultCardType {
   title: string
   image?: string
 }
 
-export type SearchResultsContainerType = {
+interface SearchResultsContainerType {
   title: string
   data: Array<SearchResultCardType>
 }
 
-export type CheckboxType = {
+interface CheckboxType {
   label: string
   isChecked?: boolean
   type: string
+}
+interface MenuType {
+  title: string
+  link: string
+  type: string
+  subMenu?: Array<MenuType>
+}
+
+export type {
+  HeroSellerType,
+  ProductCardType,
+  ButtonType,
+  SellerCardType,
+  BrandCardType,
+  SearchResultsType,
+  SearchResultCardType,
+  SearchResultsContainerType,
+  CheckboxType,
+  MenuType,
 }

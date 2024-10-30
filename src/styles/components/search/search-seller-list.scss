@@ -1,9 +1,6 @@
 .search-seller-list {
   @include searchResult();
   .users {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
+    max-width: 65vw;
   }
 }

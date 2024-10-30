@@ -1,6 +1,16 @@
 import { NextResponse, NextRequest } from 'next/server'
 
 export async function GET(request: NextRequest) {
+  if (!process.env.API_KEY || !process.env.API_URL) {
+    return NextResponse.json(
+      {
+        error:
+          'API_KEY or API_URL not found, Please create a .env file and define thse values',
+      },
+      { status: 500 }
+    )
+  }
+
   const requestHeaders: HeadersInit = new Headers()
   requestHeaders.set('Authorization', `Basic ${process.env.API_KEY}`)
   requestHeaders.set('Content-Type', 'application/json')

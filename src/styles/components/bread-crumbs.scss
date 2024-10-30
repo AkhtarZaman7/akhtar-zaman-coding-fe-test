@@ -2,13 +2,14 @@
   display: flex;
   gap: 8px;
   padding: 24px 50px 24px 50px;
+  align-items: center;
   .breadcrumbs-active {
     @include font(
       $font-size-smaller,
       $font-weight-bold,
       $line-height-base,
       $letter-spacing-normal,
-      $color-black
+      $color-text-light
     );
     cursor: pointer;
   }
