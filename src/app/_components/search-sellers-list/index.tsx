@@ -5,7 +5,6 @@ import Carousel from '../carousel'
 
 export default function SearchSellersList({ users }: { users: UserType[] }) {
   if (!users) return null
-  console.log('users.length', users.length)
   return (
     <div className="search-seller-list">
       <div className="search-result">
